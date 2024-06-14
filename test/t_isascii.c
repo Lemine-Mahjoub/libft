@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   t_isascii.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/11 07:12:46 by grey              #+#    #+#             */
-/*   Updated: 2024/06/14 13:16:29 by grey             ###   ########.fr       */
+/*   Created: 2024/06/14 13:15:09 by grey              #+#    #+#             */
+/*   Updated: 2024/06/14 13:20:49 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.h"
 #include "../lib/libft.h"
+#include <assert.h>
+#include <stdio.h>
 
-int	main(void)
+void	t_isascii(void)
 {
-	t_isalpha();
-	t_isdigit();
-	t_isalnum();
-	t_isascii();
-	return (0);
+	assert(ft_isascii(' ') == 1);
+	assert(ft_isascii('9') == 1);
+	assert(ft_isascii('a') == 1);
+	assert(ft_isascii('!') == 1);
+	printf("ft_isascii -> OK\n");
 }
