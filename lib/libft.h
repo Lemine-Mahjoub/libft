@@ -6,7 +6,7 @@
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 06:50:35 by grey              #+#    #+#             */
-/*   Updated: 2024/06/14 13:08:53 by grey             ###   ########.fr       */
+/*   Updated: 2024/06/14 13:11:26 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,6 @@
 
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
+int	ft_isalnum(int c);
 
 #endif

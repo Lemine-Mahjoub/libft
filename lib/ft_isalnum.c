@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.h                                             :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/11 07:12:17 by grey              #+#    #+#             */
-/*   Updated: 2024/06/14 13:11:35 by grey             ###   ########.fr       */
+/*   Created: 2024/06/14 13:10:54 by grey              #+#    #+#             */
+/*   Updated: 2024/06/14 13:11:10 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TEST_H
-# define TEST_H
+#include "libft.h"
 
-void	t_isalpha(void);
-void	t_isdigit(void);
-void	t_isalnum(void);
-#endif
+int	ft_isalnum(int c)
+{
+	return (ft_isalpha(c) || ft_isdigit(c));
+}
