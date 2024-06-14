@@ -1,7 +1,7 @@
 NAME = libft
 TEST = assert
 FLAGS = -Wall -Wextra -Werror
-Valider='\033[0;32m'"============Valider============\n"'\033[0;37m' 
+Valider= '\n\033[0;32m'"============Valider============\n"'\033[0;37m' 
 
 all: norminette $(NAME) 
 
