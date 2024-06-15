@@ -3,7 +3,7 @@ TEST = assert
 FLAGS = -Wall -Wextra -Werror
 Valider= '\n\033[0;32m'"============Valider============\n"'\033[0;37m' 
 
-all: norminette $(NAME) 
+all: $(NAME) 
 
 norminette:
 	@echo "Norminette:\n"
