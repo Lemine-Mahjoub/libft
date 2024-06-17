@@ -6,7 +6,7 @@
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 12:16:04 by grey              #+#    #+#             */
-/*   Updated: 2024/06/17 13:38:29 by grey             ###   ########.fr       */
+/*   Updated: 2024/06/17 14:11:10 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ void	*ft_memset(void *s, int c, size_t n)
 		((unsigned char *)s)[i] = (unsigned char)c;
 		i++;
 	}
-	return	(0);
+	return (0);
 }

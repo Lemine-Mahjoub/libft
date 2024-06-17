@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.h                                             :+:      :+:    :+:   */
+/*   t_bzero.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/11 07:12:17 by grey              #+#    #+#             */
-/*   Updated: 2024/06/17 14:10:34 by grey             ###   ########.fr       */
+/*   Created: 2024/06/17 14:05:38 by grey              #+#    #+#             */
+/*   Updated: 2024/06/17 14:11:23 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TEST_H
-# define TEST_H
+#include <assert.h>
+#include "../lib/libft.h"
+#include <stdio.h>
 
-void	t_isalpha(void);
-void	t_isdigit(void);
-void	t_isalnum(void);
-void	t_isascii(void);
-void	t_isprint(void);
-void	t_strlen(void);
-void	t_memset(void);
-void	t_bzero(void);
+void	t_bzero(void)
+{
+	char	str[5];
 
-#endif
+	ft_memset(str, 'a', 5);
+	ft_bzero(str, 5);
+	assert(str[0] == 0);
+	assert(str[4] == 0);
+	printf("ft_bzero -> OK\n");
+}
