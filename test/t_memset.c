@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   t_memset.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/11 06:50:35 by grey              #+#    #+#             */
-/*   Updated: 2024/06/17 13:38:22 by grey             ###   ########.fr       */
+/*   Created: 2024/06/17 12:17:30 by grey              #+#    #+#             */
+/*   Updated: 2024/06/17 13:39:14 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stddef.h>
+#include <assert.h>
+#include "test.h"
+#include <stdio.h>
+#include "../lib/libft.h"
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-size_t	ft_strlen(const char *s);
-void	*ft_memset(void *s, int c, size_t n);
+void	t_memset(void)
+{
+	char	str[2];
 
-#endif
+	ft_memset(str, 'a', 5);
+	assert(str[0] == 'a');
+	ft_memset(str, 'b', 5);
+	assert(str[4] == 'b');
+	printf("ft_memset -> OK\n");
+}
