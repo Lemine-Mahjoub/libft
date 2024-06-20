@@ -22,6 +22,8 @@ test: test/*.c test/*.h
 	./$(TEST)
 	@echo $(Valider)
 
+dev: norminette $(NAME) test
+
 clean: 
 	rm -f *.o
 

@@ -5,15 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/11 07:00:27 by grey              #+#    #+#             */
-/*   Updated: 2024/06/11 07:01:41 by grey             ###   ########.fr       */
+/*   Created: 2024/06/20 12:00:01 by grey              #+#    #+#             */
+/*   Updated: 2024/06/20 12:27:09 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <ctype.h>
 
 int	main(void)
 {
-	ft_isalpha('a');
 	return (0);
 }
