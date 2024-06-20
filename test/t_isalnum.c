@@ -1,20 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lib.c                                              :+:      :+:    :+:   */
+/*   t_isalnum.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/20 12:00:01 by grey              #+#    #+#             */
-/*   Updated: 2024/06/20 12:35:35 by grey             ###   ########.fr       */
+/*   Created: 2024/06/20 12:32:09 by grey              #+#    #+#             */
+/*   Updated: 2024/06/20 12:33:37 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "test.h"
 #include <stdio.h>
+#include "../lib/libft.h"
+#include <assert.h>
 #include <ctype.h>
 
-int	main(void)
+void	t_isalnum(void)
 {
-	return (0);
+	int	i;
+
+	i = 0;
+	while (i < 128)
+	{
+		assert(ft_isalnum(i) == isalnum(i));
+		i++;
+	}
+	printf("ft_isalnum: OK\n");
 }
