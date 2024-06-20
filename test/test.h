@@ -6,7 +6,7 @@
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 07:12:17 by grey              #+#    #+#             */
-/*   Updated: 2024/06/20 13:16:35 by grey             ###   ########.fr       */
+/*   Updated: 2024/06/20 13:23:54 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,6 @@ void	t_isdigit(void);
 void	t_isalnum(void);
 void	t_isascii(void);
 void	t_isprint(void);
+void	t_tolower(void);
 
 #endif
