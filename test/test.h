@@ -6,20 +6,11 @@
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 07:12:17 by grey              #+#    #+#             */
-/*   Updated: 2024/06/17 14:10:34 by grey             ###   ########.fr       */
+/*   Updated: 2024/06/20 10:53:34 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef TEST_H
 # define TEST_H
-
-void	t_isalpha(void);
-void	t_isdigit(void);
-void	t_isalnum(void);
-void	t_isascii(void);
-void	t_isprint(void);
-void	t_strlen(void);
-void	t_memset(void);
-void	t_bzero(void);
 
 #endif
