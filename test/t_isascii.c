@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.h                                             :+:      :+:    :+:   */
+/*   t_isascii.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/11 07:12:17 by grey              #+#    #+#             */
-/*   Updated: 2024/06/20 13:11:05 by grey             ###   ########.fr       */
+/*   Created: 2024/06/20 13:05:11 by grey              #+#    #+#             */
+/*   Updated: 2024/06/20 13:11:43 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TEST_H
-# define TEST_H
+#include "test.h"
+#include <stdio.h>
+#include "../lib/libft.h"
+#include <assert.h>
+#include <ctype.h>
 
-void	t_isalpha(void);
-void	t_isdigit(void);
-void	t_isalnum(void);
-void	t_isascii(void);
+void	t_isascii(void)
+{
+	int	i;
 
-#endif
+	i = 0;
+	while (i < 129)
+	{
+		assert(ft_isascii(i) == isascii(i));
+		i++;
+	}
+	printf("ft_isascii: OK\n");
+}

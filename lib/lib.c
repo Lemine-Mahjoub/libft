@@ -6,13 +6,14 @@
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 12:00:01 by grey              #+#    #+#             */
-/*   Updated: 2024/06/20 12:35:35 by grey             ###   ########.fr       */
+/*   Updated: 2024/06/20 13:00:59 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 #include <ctype.h>
+#include <assert.h>
 
 int	main(void)
 {
