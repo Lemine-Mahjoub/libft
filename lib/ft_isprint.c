@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.h                                             :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/11 07:12:17 by grey              #+#    #+#             */
-/*   Updated: 2024/06/20 13:16:35 by grey             ###   ########.fr       */
+/*   Created: 2024/06/20 13:15:41 by grey              #+#    #+#             */
+/*   Updated: 2024/06/20 13:19:48 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TEST_H
-# define TEST_H
+#include "libft.h"
 
-void	t_isalpha(void);
-void	t_isdigit(void);
-void	t_isalnum(void);
-void	t_isascii(void);
-void	t_isprint(void);
-
-#endif
+int	ft_isprint(int c)
+{
+	return ((c >= 32 && c <= 126) * 16384);
+}
