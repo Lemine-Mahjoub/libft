@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_memcpy.c                                         :+:      :+:    :+:   */
+/*   t_memmove.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/21 09:47:23 by grey              #+#    #+#             */
-/*   Updated: 2024/06/21 10:50:46 by grey             ###   ########.fr       */
+/*   Created: 2024/06/21 10:15:50 by grey              #+#    #+#             */
+/*   Updated: 2024/06/21 10:23:16 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
-#include "../lib/libft.h"
 #include <stdio.h>
+#include "../lib/libft.h"
 #include <assert.h>
 #include <string.h>
 #include <stdlib.h>
 
-void	t_memcpy(void)
+void	t_memmove(void)
 {
 	char	*str;
 	char	*str2;
