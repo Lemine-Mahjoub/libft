@@ -6,7 +6,7 @@
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 10:15:50 by grey              #+#    #+#             */
-/*   Updated: 2024/06/21 10:23:16 by grey             ###   ########.fr       */
+/*   Updated: 2024/06/21 11:00:11 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ void	t_memmove(void)
 	strcpy(str3, "Hello World");
 	str4 = malloc(sizeof(char) * 13);
 	strcpy(str4, "World Hello");
-	assert(memcmp(ft_memcpy(str, str2, 5), memcpy(str3, str4, 5), 5) == 0);
+	assert(memcmp(ft_memmove(str, str2, 6), memmove(str3, str4, 6), 13) == 0);
 	assert(strcmp(str, str3) == 0);
 	assert(strcmp(str2, str4) == 0);
-	printf("ft_memcpy: OK\n");
+	printf("ft_memmove: OK\n");
 }
