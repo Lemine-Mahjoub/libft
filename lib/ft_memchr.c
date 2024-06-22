@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/11 07:12:46 by grey              #+#    #+#             */
-/*   Updated: 2024/06/22 09:50:51 by grey             ###   ########.fr       */
+/*   Created: 2024/06/22 09:46:48 by grey              #+#    #+#             */
+/*   Updated: 2024/06/22 09:47:36 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.h"
-#include "../lib/libft.h"
+#include "libft.h"
 
-int	main(void)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	t_isalpha();
-	t_isdigit();
-	t_isalnum();
-	t_isascii();
-	t_isprint();
-	t_tolower();
-	t_toupper();
-	t_strlen();
-	t_memset();
-	t_bzero();
-	t_memcpy();
-	t_memmove();
-	t_memchr();
-	return (0);
+	unsigned char	*str;
+	unsigned char	ch;
+
+	str = (unsigned char *)s;
+	ch = (unsigned char)c;
+	while (n--)
+	{
+		if (*str == ch)
+			return (str);
+		str++;
+	}
+	return (NULL);
 }

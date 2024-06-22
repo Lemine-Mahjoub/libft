@@ -1,6 +1,6 @@
 NAME = libft
 TEST = assert
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror 
 Valider= '\n\033[0;32m'"============Valider============\n"'\033[0;37m' 
 
 all: $(NAME) 

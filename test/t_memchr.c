@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   t_memchr.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/11 07:12:46 by grey              #+#    #+#             */
-/*   Updated: 2024/06/22 09:50:51 by grey             ###   ########.fr       */
+/*   Created: 2024/06/22 09:48:07 by grey              #+#    #+#             */
+/*   Updated: 2024/06/22 09:50:40 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
+#include <stdio.h>
 #include "../lib/libft.h"
+#include <assert.h>
+#include <string.h>
+#include <stdlib.h>
 
-int	main(void)
+void	t_memchr(void)
 {
-	t_isalpha();
-	t_isdigit();
-	t_isalnum();
-	t_isascii();
-	t_isprint();
-	t_tolower();
-	t_toupper();
-	t_strlen();
-	t_memset();
-	t_bzero();
-	t_memcpy();
-	t_memmove();
-	t_memchr();
-	return (0);
+	char	*str;
+
+	str = malloc(sizeof(char) * 13);
+	strcpy(str, "Hello World");
+	assert(ft_memchr(str, 'W', 13) == memchr(str, 'W', 13));
+	assert(ft_memchr(str, 'H', 13) == memchr(str, 'H', 13));
+	assert(ft_memchr(str, 'i', 13) == memchr(str, 'i', 13));
+	assert(ft_memchr(str, '!', 13) == memchr(str, '!', 13));
+	printf("ft_memchr: OK\n");
 }
