@@ -1,38 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/11 07:12:46 by grey              #+#    #+#             */
-/*   Updated: 2024/06/23 12:34:47 by grey             ###   ########.fr       */
+/*   Created: 2024/06/23 12:30:49 by grey              #+#    #+#             */
+/*   Updated: 2024/06/23 12:32:25 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.h"
-#include "../lib/libft.h"
+#include "libft.h"
 
-int	main(void)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	t_isalpha();
-	t_isdigit();
-	t_isalnum();
-	t_isascii();
-	t_isprint();
-	t_tolower();
-	t_toupper();
-	t_strlen();
-	t_memset();
-	t_bzero();
-	t_memcpy();
-	t_memmove();
-	t_memchr();
-	t_memcmp();
-	t_strlcpy();
-	t_strlcat();
-	t_strchr();
-	t_strrchr();
-	t_strncmp();
+	while (n--)
+	{
+		if (*s1 != *s2)
+			return ((unsigned char)*s1 - (unsigned char)*s2);
+		if (!*s1)
+			return (0);
+		s1++;
+		s2++;
+	}
 	return (0);
 }
