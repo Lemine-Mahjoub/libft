@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   t_strlcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/11 07:12:46 by grey              #+#    #+#             */
-/*   Updated: 2024/06/23 12:06:25 by grey             ###   ########.fr       */
+/*   Created: 2024/06/23 12:05:18 by grey              #+#    #+#             */
+/*   Updated: 2024/06/23 12:16:43 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
+#include <stdio.h>
 #include "../lib/libft.h"
+#include <assert.h>
+#include <string.h>
+#include <stdlib.h>
 
-int	main(void)
+void	t_strlcat(void)
 {
-	t_isalpha();
-	t_isdigit();
-	t_isalnum();
-	t_isascii();
-	t_isprint();
-	t_tolower();
-	t_toupper();
-	t_strlen();
-	t_memset();
-	t_bzero();
-	t_memcpy();
-	t_memmove();
-	t_memchr();
-	t_memcmp();
-	t_strlcpy();
-	t_strlcat();
-	return (0);
+	char	*str;
+	char	*str2;
+	char	*str3;
+
+	str = malloc(sizeof(char) * 13);
+	strcpy(str, "Hello World");
+	str2 = malloc(sizeof(char) * 9);
+	strcpy(str2, "Foo Bar");
+	str3 = malloc(sizeof(char) * 13);
+	strcpy(str3, "Hello World");
+	assert(ft_strlcat(str, str2, 19) == 18);
+	assert(strcmp(str, "Hello WorldFoo Bar") == 0);
+	printf("ft_strlcat: OK\n");
 }

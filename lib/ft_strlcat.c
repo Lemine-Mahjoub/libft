@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.h                                             :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/11 07:12:17 by grey              #+#    #+#             */
-/*   Updated: 2024/06/23 12:06:22 by grey             ###   ########.fr       */
+/*   Created: 2024/06/23 12:02:13 by grey              #+#    #+#             */
+/*   Updated: 2024/06/23 12:05:07 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TEST_H
-# define TEST_H
+#include "libft.h"
 
-void	t_isalpha(void);
-void	t_isdigit(void);
-void	t_isalnum(void);
-void	t_isascii(void);
-void	t_isprint(void);
-void	t_tolower(void);
-void	t_toupper(void);
-void	t_strlen(void);
-void	t_memset(void);
-void	t_bzero(void);
-void	t_memcpy(void);
-void	t_memmove(void);
-void	t_memchr(void);
-void	t_memcmp(void);
-void	t_strlcpy(void);
-void	t_strlcat(void);
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
+{
+	size_t	i;
+	size_t	j;
 
-#endif
+	i = 0;
+	j = 0;
+	while (dst[i] && i < size)
+		i++;
+	while (src[j] && i + j + 1 < size)
+	{
+		dst[i + j] = src[j];
+		j++;
+	}
+	if (i < size)
+		dst[i + j] = '\0';
+	while (src[j])
+		j++;
+	return (i + j);
+}
