@@ -6,7 +6,7 @@
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 07:12:17 by grey              #+#    #+#             */
-/*   Updated: 2024/06/23 13:10:03 by grey             ###   ########.fr       */
+/*   Updated: 2024/06/23 13:15:00 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ void	t_strncmp(void);
 void	t_strnstr(void);
 void	t_calloc(void);
 void	t_strdup(void);
+void	t_atoi(void);
 
 #endif

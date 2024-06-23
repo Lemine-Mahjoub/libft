@@ -1,42 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   t_atoi.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/11 07:12:46 by grey              #+#    #+#             */
-/*   Updated: 2024/06/23 13:15:05 by grey             ###   ########.fr       */
+/*   Created: 2024/06/23 13:13:36 by grey              #+#    #+#             */
+/*   Updated: 2024/06/23 13:16:43 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <assert.h>
 #include "test.h"
 #include "../lib/libft.h"
 
-int	main(void)
+void	t_atoi(void)
 {
-	t_isalpha();
-	t_isdigit();
-	t_isalnum();
-	t_isascii();
-	t_isprint();
-	t_tolower();
-	t_toupper();
-	t_strlen();
-	t_memset();
-	t_bzero();
-	t_memcpy();
-	t_memmove();
-	t_memchr();
-	t_memcmp();
-	t_strlcpy();
-	t_strlcat();
-	t_strchr();
-	t_strrchr();
-	t_strncmp();
-	t_strnstr();
-	t_calloc();
-	t_strdup();
-	t_atoi();
-	return (0);
+	assert(ft_atoi("42") == atoi("42"));
+	assert(ft_atoi("42") == 42);
+	printf("ft_atoi: OK\n");
 }

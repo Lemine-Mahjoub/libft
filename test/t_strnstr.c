@@ -6,7 +6,7 @@
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 12:42:04 by grey              #+#    #+#             */
-/*   Updated: 2024/06/23 12:44:20 by grey             ###   ########.fr       */
+/*   Updated: 2024/06/23 13:13:22 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,7 @@ void	t_strnstr(void)
 	assert(ft_strnstr(str1, str2, 13) == NULL);
 	strcpy(str2, "World");
 	assert(ft_strnstr(str1, str2, 5) == NULL);
+	free(str1);
+	free(str2);
 	printf("ft_strnstr: OK\n");
 }

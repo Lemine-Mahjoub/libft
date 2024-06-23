@@ -6,7 +6,7 @@
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 12:32:46 by grey              #+#    #+#             */
-/*   Updated: 2024/06/23 12:35:33 by grey             ###   ########.fr       */
+/*   Updated: 2024/06/23 13:13:23 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,7 @@ void	t_strncmp(void)
 	strcpy(str2, "Hello Bar");
 	assert(ft_strncmp(str1, str2, 6) == strncmp(str1, str2, 6));
 	assert(ft_strncmp(str1, str2, 10) == strncmp(str1, str2, 10));
+	free(str1);
+	free(str2);
 	printf("ft_strncmp: OK\n");
 }

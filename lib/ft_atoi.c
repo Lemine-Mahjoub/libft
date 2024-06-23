@@ -1,42 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/11 07:12:46 by grey              #+#    #+#             */
-/*   Updated: 2024/06/23 13:15:05 by grey             ###   ########.fr       */
+/*   Created: 2024/06/23 13:11:41 by grey              #+#    #+#             */
+/*   Updated: 2024/06/23 13:16:16 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.h"
-#include "../lib/libft.h"
+#include "libft.h"
 
-int	main(void)
+int	ft_atoi(const char *str)
 {
-	t_isalpha();
-	t_isdigit();
-	t_isalnum();
-	t_isascii();
-	t_isprint();
-	t_tolower();
-	t_toupper();
-	t_strlen();
-	t_memset();
-	t_bzero();
-	t_memcpy();
-	t_memmove();
-	t_memchr();
-	t_memcmp();
-	t_strlcpy();
-	t_strlcat();
-	t_strchr();
-	t_strrchr();
-	t_strncmp();
-	t_strnstr();
-	t_calloc();
-	t_strdup();
-	t_atoi();
-	return (0);
+	int		neg;
+	int		res;
+
+	neg = 1;
+	res = 0;
+	while (*str == ' ' || (*str >= 9 && *str <= 13))
+		str++;
+	if (*str == '-')
+		neg = -1;
+	if (*str == '-' || *str == '+')
+		str++;
+	while (*str >= '0' && *str <= '9')
+	{
+		res = res * 10 + *str - '0';
+		str++;
+	}
+	return (res * neg);
 }

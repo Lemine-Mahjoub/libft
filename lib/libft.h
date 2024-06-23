@@ -6,7 +6,7 @@
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 06:50:35 by grey              #+#    #+#             */
-/*   Updated: 2024/06/23 13:09:19 by grey             ###   ########.fr       */
+/*   Updated: 2024/06/23 13:13:05 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
+int		ft_atoi(const char *str);
 
 #endif
