@@ -6,7 +6,7 @@
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 07:12:17 by grey              #+#    #+#             */
-/*   Updated: 2024/06/23 12:06:22 by grey             ###   ########.fr       */
+/*   Updated: 2024/06/23 12:26:55 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ void	t_memchr(void);
 void	t_memcmp(void);
 void	t_strlcpy(void);
 void	t_strlcat(void);
+void	t_strchr(void);
 
 #endif
