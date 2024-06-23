@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/11 07:12:46 by grey              #+#    #+#             */
-/*   Updated: 2024/06/23 11:34:03 by grey             ###   ########.fr       */
+/*   Created: 2024/06/22 09:52:51 by grey              #+#    #+#             */
+/*   Updated: 2024/06/23 11:33:57 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.h"
-#include "../lib/libft.h"
+#include "libft.h"
 
-int	main(void)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	t_isalpha();
-	t_isdigit();
-	t_isalnum();
-	t_isascii();
-	t_isprint();
-	t_tolower();
-	t_toupper();
-	t_strlen();
-	t_memset();
-	t_bzero();
-	t_memcpy();
-	t_memmove();
-	t_memchr();
-	t_memcmp();
+	const unsigned char	*str1 = (const unsigned char *)s1;
+	const unsigned char	*str2 = (const unsigned char *)s2;
+
+	while (n--)
+	{
+		if (*str1 != *str2)
+			return (*str1 - *str2);
+		str1++;
+		str2++;
+	}
 	return (0);
 }

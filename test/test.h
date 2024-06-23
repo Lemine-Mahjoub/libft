@@ -6,7 +6,7 @@
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 07:12:17 by grey              #+#    #+#             */
-/*   Updated: 2024/06/22 09:50:10 by grey             ###   ########.fr       */
+/*   Updated: 2024/06/23 11:33:28 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ void	t_bzero(void);
 void	t_memcpy(void);
 void	t_memmove(void);
 void	t_memchr(void);
+void	t_memcmp(void);
 
 #endif
