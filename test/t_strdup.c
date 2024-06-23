@@ -1,41 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   t_strdup.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/11 07:12:46 by grey              #+#    #+#             */
-/*   Updated: 2024/06/23 13:10:07 by grey             ###   ########.fr       */
+/*   Created: 2024/06/23 13:09:32 by grey              #+#    #+#             */
+/*   Updated: 2024/06/23 13:09:48 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
+#include <stdio.h>
 #include "../lib/libft.h"
+#include <assert.h>
+#include <string.h>
+#include <stdlib.h>
 
-int	main(void)
+void	t_strdup(void)
 {
-	t_isalpha();
-	t_isdigit();
-	t_isalnum();
-	t_isascii();
-	t_isprint();
-	t_tolower();
-	t_toupper();
-	t_strlen();
-	t_memset();
-	t_bzero();
-	t_memcpy();
-	t_memmove();
-	t_memchr();
-	t_memcmp();
-	t_strlcpy();
-	t_strlcat();
-	t_strchr();
-	t_strrchr();
-	t_strncmp();
-	t_strnstr();
-	t_calloc();
-	t_strdup();
-	return (0);
+	char	*str;
+	char	*str2;
+
+	str = ft_strdup("Hello World");
+	str2 = strdup("Hello World");
+	assert(strcmp(str, str2) == 0);
+	free(str);
+	free(str2);
+	printf("ft_strdup: OK\n");
 }
