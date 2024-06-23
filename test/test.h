@@ -6,7 +6,7 @@
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 07:12:17 by grey              #+#    #+#             */
-/*   Updated: 2024/06/23 12:34:43 by grey             ###   ########.fr       */
+/*   Updated: 2024/06/23 12:42:47 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,6 @@ void	t_strlcat(void);
 void	t_strchr(void);
 void	t_strrchr(void);
 void	t_strncmp(void);
+void	t_strnstr(void);
 
 #endif
