@@ -6,7 +6,7 @@
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 09:47:23 by grey              #+#    #+#             */
-/*   Updated: 2024/06/21 10:50:46 by grey             ###   ########.fr       */
+/*   Updated: 2024/06/23 13:05:54 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,9 @@ void	t_memcpy(void)
 	assert(memcmp(ft_memcpy(str, str2, 5), memcpy(str3, str4, 5), 5) == 0);
 	assert(strcmp(str, str3) == 0);
 	assert(strcmp(str2, str4) == 0);
+	free(str);
+	free(str2);
+	free(str3);
+	free(str4);
 	printf("ft_memcpy: OK\n");
 }

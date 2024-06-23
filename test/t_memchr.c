@@ -6,7 +6,7 @@
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 09:48:07 by grey              #+#    #+#             */
-/*   Updated: 2024/06/22 09:50:40 by grey             ###   ########.fr       */
+/*   Updated: 2024/06/23 13:06:02 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ void	t_memchr(void)
 	assert(ft_memchr(str, 'H', 13) == memchr(str, 'H', 13));
 	assert(ft_memchr(str, 'i', 13) == memchr(str, 'i', 13));
 	assert(ft_memchr(str, '!', 13) == memchr(str, '!', 13));
+	free(str);
 	printf("ft_memchr: OK\n");
 }

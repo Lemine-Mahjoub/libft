@@ -6,7 +6,7 @@
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 11:53:32 by grey              #+#    #+#             */
-/*   Updated: 2024/06/23 11:58:13 by grey             ###   ########.fr       */
+/*   Updated: 2024/06/23 13:05:29 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,9 @@ void	t_strlcpy(void)
 	assert(strcmp(str, str2) == 0);
 	assert(ft_strlcpy(str4, str2, 13) == 11);
 	assert(strcmp(str4, str2) == 0);
+	free(str);
+	free(str2);
+	free(str3);
+	free(str4);
 	printf("ft_strlcpy: OK\n");
 }

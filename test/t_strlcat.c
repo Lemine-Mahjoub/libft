@@ -6,7 +6,7 @@
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 12:05:18 by grey              #+#    #+#             */
-/*   Updated: 2024/06/23 12:16:43 by grey             ###   ########.fr       */
+/*   Updated: 2024/06/23 13:05:37 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,8 @@ void	t_strlcat(void)
 	strcpy(str3, "Hello World");
 	assert(ft_strlcat(str, str2, 19) == 18);
 	assert(strcmp(str, "Hello WorldFoo Bar") == 0);
+	free(str);
+	free(str2);
+	free(str3);
 	printf("ft_strlcat: OK\n");
 }
