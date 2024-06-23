@@ -1,37 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   t_strrchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/11 07:12:46 by grey              #+#    #+#             */
-/*   Updated: 2024/06/23 12:29:29 by grey             ###   ########.fr       */
+/*   Created: 2024/06/23 12:28:45 by grey              #+#    #+#             */
+/*   Updated: 2024/06/23 12:29:17 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
+#include <stdio.h>
 #include "../lib/libft.h"
+#include <assert.h>
+#include <string.h>
 
-int	main(void)
+void	t_strrchr(void)
 {
-	t_isalpha();
-	t_isdigit();
-	t_isalnum();
-	t_isascii();
-	t_isprint();
-	t_tolower();
-	t_toupper();
-	t_strlen();
-	t_memset();
-	t_bzero();
-	t_memcpy();
-	t_memmove();
-	t_memchr();
-	t_memcmp();
-	t_strlcpy();
-	t_strlcat();
-	t_strchr();
-	t_strrchr();
-	return (0);
+	char	*str;
+
+	str = "Hello World";
+	assert(ft_strrchr(str, 'l') == strrchr(str, 'l'));
+	assert(ft_strrchr(str, 'o') == strrchr(str, 'o'));
+	assert(ft_strrchr(str, 'z') == strrchr(str, 'z'));
+	printf("ft_strrchr: OK\n");
 }
