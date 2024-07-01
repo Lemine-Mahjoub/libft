@@ -1,5 +1,5 @@
-NAME = libft
-TEST = assert
+NAME = libft.a
+TEST = assert.a
 FLAGS = -Wall -Wextra -Werror 
 Valider= '\n\033[0;32m'"============Valider============\n"'\033[0;37m' 
 
@@ -12,17 +12,19 @@ norminette:
 
 $(NAME): lib/*.c lib/*.h
 	@echo "Compilation:\n"
-	@gcc -o $(NAME) lib/*.c $(FLAGS)
-	./$(NAME)
+	@gcc -c lib/*.c $(FLAGS)
+	@ar rc $(NAME) *.o
+	@ranlib $(NAME)
 	@echo $(Valider)
 
-test: test/*.c test/*.h
+$(TEST): test/*.c test/*.h
 	@echo "Test:\n"
-	@gcc -o $(TEST) lib/ft_*.c  test/*.c $(FLAGS)
-	./$(TEST)
+	@gcc -c lib/ft_*.c test/*.c $(FLAGS)
+	@ar rc $(TEST) *.o
+	@ranlib $(TEST)
 	@echo $(Valider)
 
-dev: norminette $(NAME) test
+dev: norminette $(NAME) $(TEST)
 
 clean: 
 	rm -f *.o
@@ -32,4 +34,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean reclean norminette test execution fclean re $(NAME)
+.PHONY: all clean reclean norminette fclean re $(NAME) $(TEST)
