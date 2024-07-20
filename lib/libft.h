@@ -6,7 +6,7 @@
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 06:50:35 by grey              #+#    #+#             */
-/*   Updated: 2024/06/23 13:13:05 by grey             ###   ########.fr       */
+/*   Updated: 2024/07/20 16:38:40 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <stddef.h>
 
+// Partie 1 
 int		ft_isalpha(int c);
 int		ft_islower(int c);
 int		ft_isupper(int c);
@@ -39,5 +40,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
 int		ft_atoi(const char *str);
+
+// Partie 2 
+
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
