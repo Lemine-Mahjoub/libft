@@ -1,30 +1,34 @@
+CC = gcc
+FLAGS = -Wall -Wextra -Werror
 NAME = libft.a
-TEST = assert.a
-FLAGS = -Wall -Wextra -Werror 
+TEST = assert
+FT_FILES = lib/ft_*.c
+LIBFILES = lib/*.c
+TEST_FILES = test/*.c
+OBJ = *.o
 Valider= '\n\033[0;32m'"============Valider============\n"'\033[0;37m' 
 
 all: $(NAME) 
 
+$(NAME): $(OBJ)
+	@$(CC) $(OBJ) -o libft
+	@./libft
+	@ar rc $(NAME) $(OBJ)
+	@ranlib $(NAME)
+
+$(OBJ): $(LIBFILES)
+	@$(CC) $(FLAGS) -c $(LIBFILES)
+
+test: 
+	@$(CC) $(FLAGS) $(TEST_FILES) $(FT_FILES) -o $(TEST)
+	@./$(TEST)
+
+dev: norminette $(NAME) test fclean
+
 norminette:
 	@echo "Norminette:\n"
-	@norminette
+	@norminette lib/
 	@echo $(Valider)
-
-$(NAME): lib/*.c lib/*.h
-	@echo "Compilation:\n"
-	@gcc -c lib/*.c $(FLAGS)
-	@ar rc $(NAME) *.o
-	@ranlib $(NAME)
-	@echo $(Valider)
-
-$(TEST): test/*.c test/*.h
-	@echo "Test:\n"
-	@gcc -c lib/ft_*.c test/*.c $(FLAGS)
-	@ar rc $(TEST) *.o
-	@ranlib $(TEST)
-	@echo $(Valider)
-
-dev: norminette $(NAME) $(TEST)
 
 clean: 
 	rm -f *.o
@@ -34,4 +38,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean reclean norminette fclean re $(NAME) $(TEST)
+.PHONY: all clean fclean re test

@@ -6,12 +6,14 @@
 /*   By: grey <grey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 07:12:17 by grey              #+#    #+#             */
-/*   Updated: 2024/06/23 13:15:00 by grey             ###   ########.fr       */
+/*   Updated: 2024/07/20 22:41:19 by grey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef TEST_H
 # define TEST_H
+
+// Partie 1 :
 
 void	t_isalpha(void);
 void	t_isdigit(void);
@@ -36,5 +38,9 @@ void	t_strnstr(void);
 void	t_calloc(void);
 void	t_strdup(void);
 void	t_atoi(void);
+
+// Partie 2 :
+
+void	t_substr(void);
 
 #endif
