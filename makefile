@@ -11,16 +11,17 @@ Valider= '\n\033[0;32m'"============Valider============\n"'\033[0;37m'
 all: $(NAME) 
 
 $(NAME): $(OBJ)
-	@$(CC) $(OBJ) -o libft
-	@./libft
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 
-$(OBJ): $(LIBFILES)
-	@$(CC) $(FLAGS) -c $(LIBFILES)
+$(OBJ): $(FT_FILES)
+	@$(CC) $(FLAGS) -c $(FT_FILES)
+	@mv *.o lib/
 
 test: 
 	@$(CC) $(FLAGS) $(TEST_FILES) $(FT_FILES) -o $(TEST)
+	@$(CC) $(FLAGS) $(LIBFILES) -o lib
+	@./lib
 	@./$(TEST)
 
 dev: norminette $(NAME) test fclean
@@ -31,7 +32,7 @@ norminette:
 	@echo $(Valider)
 
 clean: 
-	rm -f *.o
+	rm -f *.o lib/*.o
 
 fclean: clean
 	rm -f $(NAME) $(TEST)
