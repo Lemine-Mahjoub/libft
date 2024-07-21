@@ -20,11 +20,12 @@ $(OBJ): $(FT_FILES)
 
 test: 
 	@$(CC) $(FLAGS) $(TEST_FILES) $(FT_FILES) -o $(TEST)
-	@$(CC) $(FLAGS) $(LIBFILES) -o lib
-	@./lib
+	@$(CC) $(FLAGS) $(LIBFILES) -o libft
+	@./libft
 	@./$(TEST)
+	@rm -f libft assert
 
-dev: norminette $(NAME) test fclean
+dev: norminette test fclean
 
 norminette:
 	@echo "Norminette:\n"
